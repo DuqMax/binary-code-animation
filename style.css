@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #343a40;
+    width: 100vw;
+    gap: 24px;
+    height: 100vh;
+}
+
+#painel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #e9ecef;
+    width: 480px;
+    height: 240px;
+    border-radius: 36px;
+    border: 2px #23a023 solid;
+    text-align: center;
+}
+
+#school {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #e9ecef;
+    width: 240px;
+    height: 64px;
+    border-top-right-radius: 36px;
+    border-top-left-radius: 36px;
+}
+img {
+    position: absolute;
+    width: 140px;
+}
+
+
+#school::after {
+    position: relative;
+    content: '';
+    top: 32px;
+    background: #23a023;
+    width: inherit;
+    height: 2px;
+}
+
+
+#title {
+    position: relative;
+    margin: 0;
+    bottom: 24px;
+    color: #23a023;
+    font-size: 42px;
+}
+
+button {
+    width: 148px;
+    padding: 18px 12px;
+    border-radius: 24px;
+    background-color: #d90429;
+    color: white;
+    font-family: inherit;
+    font-size: 21px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: rgb(214, 46, 74)
+}
+
+span {
+    position: absolute;
+    color: #3abf00;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 36px;
+    animation: downAnimation 2s forwards;
+    cursor: default;
+    user-select: none;
+    font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+}
+
+.vanish {
+    animation: vanishAnimation 1s forwards;
+}
+
+@keyframes downAnimation {
+    from {
+        transform: translateY(-50%);
+        opacity: 0.2;
+    }
+    to {
+        transform: translateY(115vh);
+        opacity: 0.8;
+    }
+}
+
+@keyframes vanishAnimation {
+    from {  
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.1);
+        opacity: 0;
+        cursor: default;
+    }
+}
